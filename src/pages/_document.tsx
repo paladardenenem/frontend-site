@@ -8,6 +8,7 @@ import Document, {
   NextScript
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import logoSrc from '../assets/marca/logofavicon.png';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -42,13 +43,20 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+            rel="stylesheet"
+            media="screen"
+            href="https://fontlibrary.org/face/glacial-indifference"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
             rel="stylesheet"
           />
-
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <link rel="icon" href={logoSrc} />
+          <meta name="description" content="Papinhas de Nenem" />
+          <meta name="keywords" content="comida, papinha, nenem, bebe" />
+          <meta name="generator" content="ReactJS" />
         </Head>
         <body>
           <Main />
