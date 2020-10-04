@@ -14,6 +14,7 @@ import {
   ArrowRight
 } from '../styles/pages/History';
 import coverimg from '../assets/familia.jpeg';
+import SEO from '../components/SEO';
 // const depositions = [
 //   {
 //     text:
@@ -35,6 +36,13 @@ const History: React.FC = () => {
   const i = 0;
   return (
     <Wrapper>
+      <SEO
+        title="Sobre nós"
+        description="Sabe aquela história de que um bebê muda tudo? Então... aqui foi
+        verdade em todos os sentidos. Além de trazer mais amor para as
+        nossas vidas, foi um bebê que fez surgir em nós o desejo de
+        empreender."
+      />
       <Container>
         <img src={coverimg} alt="" />
         <div>

@@ -36,6 +36,11 @@ export default createGlobalStyle`
     font-size: 1.6rem;
   }
 
+  @media(min-width: 768px) {
+    body {
+      overflow: initial !important;
+    }
+  }
   @media (max-width: 768px) {
     html {
       font-size: 50%;

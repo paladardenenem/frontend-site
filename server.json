@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "id": "fb493d22-0582-11eb-adc1-0242ac120002",
+            "title": "Seu bebê dorme bem?",
+            "content": "Dormir bem é muito importante para o desenvolvimento do bebê. Além de ser um momento de descanso, é durante o sono que os hormônios do crescimento atuam. 👶.Se a noite de sono for ruim, é natural que o bebê fique enjoadinho ou mal humorado, quinem a gente rs. Mas quais fatores levam o bebê a dormir mal? 💤. É claro que se o bebê estiver com fome ou sentindo alguma dor será difícil descansar. Mas ele também pode estar sentindo calor, frio, ou pode estar incomodado com a luz e o barulho.",
+            "slug": "seu-bebe-dorme-bem?",
+            "coverimgurl": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/120322488_170119588047305_2526524938300562501_o.jpg?_nc_cat=103&_nc_sid=730e14&_nc_eui2=AeEbA81iK-Us7ZrIpQZXREyczrPgLa6RzEzOs-AtrpHMTE_zwIo4E_AMKxU2Qp0oGDsywHwRXCpNfoIceKVuG4s5&_nc_ohc=GhzAbGJYJpoAX_nHwPJ&_nc_ht=scontent.fplu4-1.fna&oh=7e2e19dc8d78edc7eae8a4e893fd0e4b&oe=5F9F9894",
+            "category": "introducao alimentar"
+          },
+        {
+            "id": "42eb78ba-0584-11eb-adc1-0242ac120002",
+            "title": "Você sabia que o feijão e a beterraba não devem ser cozidos juntos?",
+            "content": "Nós estamos sempre muito atentos aos detalhes para proporcionar uma refeição bastante saudável para os nossos bebês. E um desses cuidados está no preparo do feijão e da beterraba 👩‍🍳        Apesar de ser um costume para muitas pessoas, cozinhar esses dois alimentos juntos não é indicado, a menos que eles sejam consumidos simultaneamente. Estudos científicos aqui mesmo no Brasil comprovaram que ao cozinhar a beterraba junto com o feijão, ela rouba (absorve) quantidades significativas de ferro. Ou seja, o feijão terá perdido boa parte de suas propriedades pra beterraba e isso só será compensado se comermos os dois juntos 🥣O cozimento separado é uma das medidas que tomamos para preservar os nutrientes do Feijãozinho Amigo, por exemplo 😋 Gostou da dica? Curta, salve, compartilhe ou marque nos comentários alguém que não sabe dessa curiosidade 😉",
+            "slug": "feijao-e-beterraba-nao-devem-ser-cozidos-juntos",
+            "coverimgurl": "https://scontent.fplu4-1.fna.fbcdn.net/v/t1.0-9/p843x403/120447016_169511531441444_4331850514660115195_o.jpg?_nc_cat=102&_nc_sid=a26aad&_nc_eui2=AeHhPfrxqkdstpTJYp__CtDSKQJH2eOjsRQpAkfZ46OxFKNs5rRwCwu8chqvlc52aE9kiIFCJ4h1WK77I5JBADx_&_nc_ohc=6uIk7GxrGwkAX8Ly_bq&_nc_ht=scontent.fplu4-1.fna&tp=6&oh=c94db238366b98cbd823eb4f99d352c9&oe=5F9CCFF7",
+            "category": "comportamento "
+          },
+          {
+            "id": "42eb78ba-0584-11eb-adc1-0242ac120002",
+            "title": "Qual a importancia dos livros na primeira infância?",
+            "content": "A literatura é muito mais do que entretenimento: é uma forma de conhecer o mundo para além da própria casa. Ela ajuda a formar a identidade social e cultural da criança e ensina a respeitar as diversidades. 😊💛.Ler para uma criança também ajuda a melhorar seu vocabulário, sua memória, estimula a cognição e a fala, e pode até reduzir problemas de comportamento. 🤓.            Mas se engana quem pensa que os bebês não tiram proveito da literatura. Inclusive, livros de formas e cores podem não ser suficientes para estimulá-las. Alguns pedagogos incentivam a leitura de histórias. Mesmo que ele ainda não entenda o que está sendo contado, o bebê pode prestar atenção a ilustrações e palavras, fazendo associações. 👶📚",
+            "slug": "a-literatura",
+            "coverimgurl": "https://instagram.fbhz8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/107295697_610358956252972_1199076174846842399_n.jpg?_nc_ht=instagram.fbhz8-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=uQwGZukl_4cAX9_124B&oh=876c12d70c5d723a1658b8f2e1537336&oe=5FA32277",
+            "category": "comportamento "
+          }
+    ]
+}

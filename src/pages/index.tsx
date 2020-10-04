@@ -16,10 +16,14 @@ import caldinhosSrc from '../assets/fotos/caldinhos.jpg';
 import pinturaAmarelaSrc from '../assets/elementos/pintura_amarela.png';
 import NewsletterForm from '../components/NewsletterForm';
 import Footer from '../components/Footer';
-
+import SEO from '../components/SEO';
 const Home: React.FC = () => {
   return (
     <Wrapper>
+      <SEO
+        title="Página Inicial"
+        description="Paladar de neném, Com nossos produtos, buscamos levar praticidade para a rotina dos pais, que terão mais tempo para aproveitar a primeira infância dos filhos."
+      />
       <Container className="image">
         <img src={capaSrc} alt="Joao Lucas" />
         <h1>
@@ -92,6 +96,9 @@ const Home: React.FC = () => {
       <NewslatterContainer>
         <NewsletterForm />
       </NewslatterContainer>
+      <Hero>
+        <video src="https://www.youtube.com/watch?v=uE4YMJFJfiI"></video>
+      </Hero>
       <Footer />
     </Wrapper>
   );

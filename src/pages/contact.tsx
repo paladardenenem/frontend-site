@@ -9,9 +9,11 @@ import {
 import contactImg from '../assets/elementos/contato.png';
 import Footer from '../components/Footer';
 import { Head } from 'next/document';
+import SEO from '../components/SEO';
 const Contact: React.FC = () => {
   return (
     <>
+      <SEO title="Contatos" description="Atendimento ao cliente e parcerias" />
       <Container>
         <Wrapper>
           <Content>
