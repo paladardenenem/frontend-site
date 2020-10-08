@@ -90,10 +90,6 @@ const Cardapio: React.FC = () => {
             <img src={cardapioImg} alt="" />
             <span>nome</span>
           </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
         </MenuContainer>
       </Container>
     </Wrapper>

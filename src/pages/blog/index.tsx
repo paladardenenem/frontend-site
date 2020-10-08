@@ -1,49 +1,37 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { GetStaticProps } from 'next';
-import React, { useEffect, useState } from 'react';
+import { GetStaticProps, GetStaticPropsResult } from 'next';
+import React from 'react';
 import {
   Wrapper,
   ImageHeaderContainer,
   Container,
   BlogPost,
   BlogPostContainer,
-  BlogThemeContainer
+  BlogThemeContainer,
+  AddPostButton
 } from '../../styles/pages/blog/BlogPage';
-
-// import { Container } from './styles';
-
+import { AiOutlinePlusCircle } from 'react-icons/ai';
 interface BlogPostProps {
   id: string;
   title: string;
   content: string;
   coverimgurl: string;
   slug: string;
-  categories: string[];
+  category: string;
 }
 
 interface BlogProps {
   blogposts: BlogPostProps[];
+  categories: string[];
 }
-export default function Blog() {
-  const [blogposts, setBlogPosts] = useState<BlogPostProps[]>([]);
-  const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3333/posts').then(response => {
-      response.json().then(data => {
-        setBlogPosts(data);
-
-        data.map(d => {
-          setCategories([...categories, d.category]);
-          console.log(d.category);
-        });
-        console.log(categories);
-      });
-    });
-  }, []);
+export default function Blog({ blogposts, categories }: BlogProps) {
   return (
     <Wrapper>
+      <AddPostButton>
+        <AiOutlinePlusCircle size={36} />
+      </AddPostButton>
       <ImageHeaderContainer
         imgUrl={blogposts
           .slice(blogposts.length - 1, blogposts.length)
@@ -80,12 +68,34 @@ export default function Blog() {
         <BlogThemeContainer>
           <h1>temas</h1>
           <ul>
-            <li>introdução alimentar </li>
-            <li>comportamento </li>
-            <li>aleitamento materno </li>
+            {categories.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
           </ul>
         </BlogThemeContainer>
       </Container>
     </Wrapper>
   );
 }
+
+export const getStaticProps: GetStaticProps<BlogProps> = async (): Promise<
+  GetStaticPropsResult<BlogProps>
+> => {
+  const response = await fetch('http://localhost:8080/posts');
+
+  const blogposts: BlogPostProps[] = await response.json();
+
+  const categories: string[] = [];
+
+  blogposts.map(post => {
+    categories.push(post.category);
+  });
+
+  return {
+    props: {
+      blogposts,
+      categories
+    },
+    revalidate: 10
+  };
+};

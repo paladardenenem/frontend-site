@@ -1,5 +1,5 @@
 import { lighten } from 'polished';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div``;
 
@@ -66,12 +66,16 @@ export const CategoryContainer = styled.aside`
   }
 `;
 
+const menuBoxAnimation = keyframes`
+    from { opacity: 0; transform: scale(0) }
+    to { opacity: 1; transform: scale(1)}
+  `;
 export const MenuContainer = styled.aside`
   display: grid;
   width: 100%;
   justify-items: center;
   align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 
   div {
@@ -79,6 +83,7 @@ export const MenuContainer = styled.aside`
 
     display: flex;
     flex-direction: column;
+    animation: ${menuBoxAnimation} 1s;
     img {
       height: min(20vh, 25vh);
     }
@@ -102,7 +107,7 @@ export const MenuContainer = styled.aside`
     }
   }
   @media (max-width: 375px) {
-    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     div {
       img {
         height: min(9vh, 15vh);

@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
   @media (max-width: 430px) {
     h1 {
-      top: 5%;
+      top: 14%;
       left: 8%;
       font-size: 1.4rem;
     }

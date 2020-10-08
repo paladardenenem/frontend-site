@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;
 
 interface ImageContainerProps {
@@ -136,4 +137,13 @@ export const BlogPost = styled.div`
   @media (max-width: 760px) {
     flex-direction: column;
   }
+`;
+
+export const AddPostButton = styled.button`
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  right: 16%;
+  border: 0;
+  background: ${props => props.theme.colors.primary};
 `;
