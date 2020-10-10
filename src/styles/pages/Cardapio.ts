@@ -75,7 +75,7 @@ export const MenuContainer = styled.aside`
   width: 100%;
   justify-items: center;
   align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(201px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 
   div {
