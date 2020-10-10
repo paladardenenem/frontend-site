@@ -64,7 +64,7 @@ const Home: React.FC = () => {
                 <span>caldinhos</span>
               </div>
               <p>
-                Os caldos que amamos adaptados para bebês. O sabor e a agradam a
+                Os Caldos que amamos adaptados para bebês. O sabor e a agradam a
                 todas as idades, especialmente no início da introdução
                 alimentar, quando o bebê ainda está se acostumando a ingerir
                 alimentos sólidos.
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
                 <span>caldinhos</span>
               </div>
               <p>
-                Os caldos que amamos adaptados para bebês. O sabor e a agradam a
+                Os Caldos que amamos adaptados para bebês. O sabor e a agradam a
                 todas as idades, especialmente no início da introdução
                 alimentar, quando o bebê ainda está se acostumando a ingerir
                 alimentos sólidos.

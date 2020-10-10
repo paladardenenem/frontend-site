@@ -67,6 +67,21 @@ export const ImageHeaderContainer = styled.div<ImageContainerProps>`
       }
     }
   }
+
+  @media (max-width: 320px) {
+    div {
+      h1 {
+        font-size: 70%;
+      }
+      p {
+        font-size: 80%;
+      }
+    }
+    div {
+      width: 110%;
+      padding: 2rem 1rem;
+    }
+  }
 `;
 
 export const Container = styled.div`
