@@ -10,9 +10,11 @@ import {
 import { AiOutlineCheck } from 'react-icons/ai';
 // import { Container } from './styles';
 import cardapioImg from '../assets/fotos/fotos_cortadas/amarelinha.jpg';
+import SEO from '../components/SEO';
 const Cardapio: React.FC = () => {
   return (
     <Wrapper>
+      <SEO title="Cardápio" />
       <Head>
         <h1>cardápio</h1>
       </Head>

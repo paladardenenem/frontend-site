@@ -95,6 +95,14 @@ export const BlogThemeContainer = styled.div`
 
     li {
       padding: 0.5rem 0;
+
+      a {
+        cursor: pointer;
+        transition: color 0.2s;
+        &:hover {
+          color: ${props => props.theme.colors.danger};
+        }
+      }
     }
   }
 `;
@@ -107,6 +115,7 @@ export const BlogPost = styled.div`
 
   img {
     height: min(20vh, 25vh);
+    width: min(20vh, 25vh);
     border-radius: 10%;
   }
 

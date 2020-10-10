@@ -57,6 +57,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="Papinhas de Nenem" />
           <meta name="keywords" content="comida, papinha, nenem, bebe" />
           <meta name="generator" content="ReactJS" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />

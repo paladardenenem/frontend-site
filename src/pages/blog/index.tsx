@@ -1,79 +1,66 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { GetStaticProps, GetStaticPropsResult } from 'next';
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   Wrapper,
   ImageHeaderContainer,
   Container,
   BlogPost,
   BlogPostContainer,
-  BlogThemeContainer,
-  AddPostButton
+  BlogThemeContainer
 } from '../../styles/pages/blog/BlogPage';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-interface BlogPostProps {
-  id: string;
-  title: string;
-  content: string;
-  coverimgurl: string;
-  slug: string;
-  category: string;
-}
-
+import { PostOrPage, Tags } from '@tryghost/content-api';
+import { getPosts, getTags } from '../../lib/ghost';
+import SEO from '../../components/SEO';
+import Footer from '../../components/Footer';
 interface BlogProps {
-  blogposts: BlogPostProps[];
-  categories: string[];
+  blogposts: PostOrPage[];
+  blogtags: Tags;
 }
 
-export default function Blog({ blogposts, categories }: BlogProps) {
+export default function Blog({ blogposts, blogtags }: BlogProps) {
+  const [tagsToFilter, setTagsToFilter] = useState('');
+  const handleFilter = useCallback((tagName: string) => {
+    setTagsToFilter(tagName);
+  }, []);
   return (
     <Wrapper>
-      <AddPostButton>
-        <AiOutlinePlusCircle size={36} />
-      </AddPostButton>
-      <ImageHeaderContainer
-        imgUrl={blogposts
-          .slice(blogposts.length - 1, blogposts.length)
-          .map(post => post.coverimgurl)}
-      >
+      <SEO title="Blog" description="Blog paladar de nenem." />
+      <ImageHeaderContainer imgUrl={blogposts[0].feature_image}>
         <div>
-          <h1>
-            {blogposts
-              .slice(blogposts.length - 1, blogposts.length)
-              .map(post => post.title)}
-          </h1>
-          <p>
-            {blogposts
-              .slice(blogposts.length - 1, blogposts.length)
-              .map(post => post.content)}
-          </p>
+          <h1>{blogposts[0].title}</h1>
+          <p>{blogposts[0].excerpt}</p>
           <a href="">leia mais </a>
         </div>
       </ImageHeaderContainer>
       <Container>
         <BlogPostContainer>
-          {blogposts.map(post => (
-            <BlogPost key={post.id}>
-              <img src={post.coverimgurl} alt={post.slug} />
-              <div>
-                <h2>{post.title}</h2>
-                <p>{post.content}</p>
-                <br />
-                <a href="">leia mais </a>
-              </div>
-            </BlogPost>
-          ))}
+          {blogposts
+            .filter(post => post.primary_tag.name !== tagsToFilter)
+            .map(post => (
+              <BlogPost key={post.id}>
+                <img src={post.feature_image} alt={post.slug} />
+                <div>
+                  <h2>{post.title}</h2>
+                  <p>{post.excerpt}</p>
+                  <br />
+                  <a href="">leia mais </a>
+                </div>
+              </BlogPost>
+            ))}
         </BlogPostContainer>
         <BlogThemeContainer>
           <h1>temas</h1>
+
           <ul>
-            {categories.map((c, i) => (
-              <li key={i}>{c}</li>
+            {blogtags.map(tags => (
+              <li key={tags.id}>
+                <a onClick={e => handleFilter(tags.name)}>{tags.name}</a>
+              </li>
             ))}
           </ul>
         </BlogThemeContainer>
       </Container>
+      <Footer />
     </Wrapper>
   );
 }
@@ -81,20 +68,13 @@ export default function Blog({ blogposts, categories }: BlogProps) {
 export const getStaticProps: GetStaticProps<BlogProps> = async (): Promise<
   GetStaticPropsResult<BlogProps>
 > => {
-  const response = await fetch('http://localhost:8080/posts');
-
-  const blogposts: BlogPostProps[] = await response.json();
-
-  const categories: string[] = [];
-
-  blogposts.map(post => {
-    categories.push(post.category);
-  });
+  const blogposts = await getPosts();
+  const blogtags = await getTags();
 
   return {
     props: {
       blogposts,
-      categories
+      blogtags
     },
     revalidate: 10
   };

@@ -16,7 +16,7 @@ export const Container = styled.header`
 
   img {
     width: 150px;
-    margin-left: max(10vw, max(5px, 2rem));
+    margin-left: max(4vw, max(5px, 2rem));
     padding: 15px 0;
   }
 

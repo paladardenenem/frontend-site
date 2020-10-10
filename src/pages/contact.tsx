@@ -6,9 +6,8 @@ import {
   ImageContent,
   Content
 } from '../styles/pages/Contact';
-import contactImg from '../assets/elementos/contato.png';
+import contactImg from '../assets/elementos/contato.jpg';
 import Footer from '../components/Footer';
-import { Head } from 'next/document';
 import SEO from '../components/SEO';
 const Contact: React.FC = () => {
   return (

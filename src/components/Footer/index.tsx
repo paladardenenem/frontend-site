@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           <a href="https://www.instagram.com/paladardenenem/">
             <InstagramIcon />
           </a>
-          <a href="">
+          <a href="https://www.youtube.com/channel/UC-cpzr1eae5L5Y4uMsXPNpQ">
             <YoutubeIcon />
           </a>
         </div>
@@ -35,13 +35,13 @@ const Footer: React.FC = () => {
         </span>
         <br />
         <span>Segunda a sexta feira de 10h às 20h</span> <br />
-        <span>Sábado e Domingo de 11h as 19h</span>
+        <span>Sábado de 11h as 19h</span>
       </WorkinfoContainer>
       <InfoContainer>
         <span>Juiz de Fora/MG</span> <br />
-        <span>CNPJ 00000000000000</span> <br />
-        <span>Whatsapp 6900-51889 )23</span> <br />
-        <span>moc.liamg@menenedradalap</span>
+        <span>CNPJ 37.163.082/0001-03</span> <br />
+        <span>Whatsapp (32)98815-6900</span> <br />
+        <span>paladardenenem@gmail.com</span>
       </InfoContainer>
     </Container>
   );
