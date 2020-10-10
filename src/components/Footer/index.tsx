@@ -34,14 +34,13 @@ const Footer: React.FC = () => {
           <strong>Horário de Funcionamento</strong>
         </span>
         <br />
-        <span>Segunda a sexta feira de 10h às 20h</span> <br />
-        <span>Sábado de 11h as 19h</span>
+        <span>Segunda a sexta feira de 10h às 18h</span> <br />
+        <span>Sábado de 09h as 13h</span>
       </WorkinfoContainer>
       <InfoContainer>
         <span>Juiz de Fora/MG</span> <br />
         <span>CNPJ 37.163.082/0001-03</span> <br />
-        <span>Whatsapp (32)98815-6900</span> <br />
-        <span>paladardenenem@gmail.com</span>
+        <span>Whatsapp (32)98815-0096</span> <br />
       </InfoContainer>
     </Container>
   );
