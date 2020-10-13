@@ -11,7 +11,14 @@ import { AiOutlineCheck } from 'react-icons/ai';
 // import { Container } from './styles';
 import cardapioImg from '../assets/fotos/fotos_cortadas/amarelinha.jpg';
 import SEO from '../components/SEO';
+
+interface MenuProps {
+  name: string;
+  image: string;
+  category: string;
+}
 const Cardapio: React.FC = () => {
+  const menu = {};
   return (
     <Wrapper>
       <SEO title="Cardápio" />

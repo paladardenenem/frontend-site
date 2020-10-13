@@ -11,7 +11,7 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80vw;
+  max-width: 60vw;
   margin: 5rem 0;
 
   h1 {
@@ -31,7 +31,7 @@ export const Content = styled.div`
   text-align: justify;
   p {
     font-size: 1.4rem;
-    line-height: 1.4rem;
+    line-height: 14px;
     color: ${props => props.theme.colors.textDark};
     margin: 2rem 0;
   }

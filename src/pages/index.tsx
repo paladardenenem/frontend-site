@@ -13,6 +13,7 @@ import capaSrc from '../assets/bebe/capa.jpg';
 import producaoSrc from '../assets/marca/producao1.jpg';
 import elements from '../assets/elementos/legumes.png';
 import caldinhosSrc from '../assets/fotos/caldinhos.jpg';
+import brincadeirasSrc from '../assets/fotos/fotos_cortadas/brincadeiras.jpg';
 import pinturaAmarelaSrc from '../assets/elementos/pintura_amarela.png';
 import NewsletterForm from '../components/NewsletterForm';
 import Footer from '../components/Footer';
@@ -64,8 +65,8 @@ const Home: React.FC = () => {
                 <span>caldinhos</span>
               </div>
               <p>
-                Os Caldos que amamos adaptados para bebês. O sabor e a agradam a
-                todas as idades, especialmente no início da introdução
+                Os caldos que amamos adaptados para bebês. O sabor e a textura
+                agradam a todas as idades, especialmente no início da introdução
                 alimentar, quando o bebê ainda está se acostumando a ingerir
                 alimentos sólidos.
               </p>
@@ -73,7 +74,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="product-content reverse">
-            <img src={caldinhosSrc} alt="caldinhos" />
+            <img src={brincadeirasSrc} alt="brincadeiras" />
             <div className="product-info">
               <div className="product-title">
                 <img src={pinturaAmarelaSrc} alt="pintura_amarela" />

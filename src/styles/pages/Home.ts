@@ -15,8 +15,7 @@ export const Container = styled.div`
     z-index: 5;
     top: 10%;
     left: 12%;
-    font-size: 2.8rem;
-    max-width: 300px;
+    font-size: 4.6rem;
     color: #50514f;
     font-weight: 500;
 
