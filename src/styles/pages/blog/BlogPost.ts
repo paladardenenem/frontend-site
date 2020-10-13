@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
@@ -25,7 +25,6 @@ export const Container = styled.article`
     height: 40rem;
     margin-bottom: 5rem;
   }
-
 `;
 
 export const Content = styled.div`

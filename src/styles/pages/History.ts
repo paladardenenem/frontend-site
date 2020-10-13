@@ -71,7 +71,6 @@ export const Content = styled.div`
     font-size: 1.4rem;
     margin-bottom: 3rem;
     max-width: 100rem;
-
   }
   p + h1 {
     margin-top: 5rem;

@@ -77,13 +77,13 @@ const Home: React.FC = () => {
             <div className="product-info">
               <div className="product-title">
                 <img src={pinturaAmarelaSrc} alt="pintura_amarela" />
-                <span>caldinhos</span>
+                <span>brincadeiras</span>
               </div>
               <p>
-                Os Caldos que amamos adaptados para bebês. O sabor e a agradam a
-                todas as idades, especialmente no início da introdução
-                alimentar, quando o bebê ainda está se acostumando a ingerir
-                alimentos sólidos.
+                A montagem em camadas coloridas permite separar os ingredientes
+                no prato, estimulando o paladar do bebê a diferenciar os
+                sabores. Já a textura de purê com pequenos pedaços ajuda a
+                estimular a mastigação.
               </p>
               <a href="">confira os sabores</a>
             </div>
