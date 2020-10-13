@@ -63,11 +63,6 @@ export const CategoryContainer = styled.aside`
     width: 50%;
     height: 50%;
   }
-  @media (max-width: 321px) {
-    width: 25%;
-    height: 25%;
-    font-size: 25%;
-  }
 `;
 
 const menuBoxAnimation = keyframes`

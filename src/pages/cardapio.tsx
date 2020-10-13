@@ -18,7 +18,6 @@ interface MenuProps {
   category: string;
 }
 const Cardapio: React.FC = () => {
-  const menu = {};
   return (
     <Wrapper>
       <SEO title="Cardápio" />
