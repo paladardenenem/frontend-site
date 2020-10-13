@@ -57,19 +57,26 @@ export const Container = styled.div`
 export const Content = styled.div`
   margin-top: 5rem;
   padding: 0 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   h1 {
     color: ${props => props.theme.colors.danger};
     font-size: 2.8rem;
     margin-bottom: 2rem;
+    text-align: left;
   }
   p {
     color: ${props => props.theme.colors.textDark};
     font-size: 1.4rem;
     margin-bottom: 3rem;
+    max-width: 100rem;
+
   }
   p + h1 {
     margin-top: 5rem;
   }
+
   @media (max-width: 425px) {
     padding: 0 3rem;
   }

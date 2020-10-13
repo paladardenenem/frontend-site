@@ -12,6 +12,8 @@ import { PostOrPage, Tags } from '@tryghost/content-api';
 import { getPosts, getTags } from '../../lib/ghost';
 import SEO from '../../components/SEO';
 import Footer from '../../components/Footer';
+import Link from 'next/link';
+
 interface BlogProps {
   blogposts: PostOrPage[];
   blogtags: Tags;
@@ -43,7 +45,7 @@ export default function Blog({ blogposts, blogtags }: BlogProps) {
                   <h2>{post.title}</h2>
                   <p>{post.excerpt}</p>
                   <br />
-                  <a href="">leia mais </a>
+                  <Link href={`/blog/${post.slug}`}><a href="">leia mais </a></Link>
                 </div>
               </BlogPost>
             ))}

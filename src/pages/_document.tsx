@@ -53,6 +53,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
             rel="stylesheet"
           />
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
           <link rel="icon" href={logoSrc} />
           <meta name="description" content="Papinhas de Nenem" />
           <meta name="keywords" content="comida, papinha, nenem, bebe" />

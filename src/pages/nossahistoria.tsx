@@ -79,25 +79,29 @@ const History: React.FC = () => {
         </div>
       </Container>
       <Content>
-        <h1>nossos valores</h1>
-        <p>
-          Nós também somos uma família e temos um bebê em casa. Por isso,
-          sabemos da importância da alimentação balanceada e do afeto na vida da
-          criança. Com nossos produtos, ajudamos no desenvolvimento do paladar a
-          partir da introdução alimentar, após os seis meses de idade. Assim, as
-          papinhas naturais congeladas buscam complementar o leite materno, para
-          que o neném cresça forte e saudável. Sem se preocupar com o preparo do
-          alimento, mamães e papais também podem passar mais tempo com seus
-          filhos, curtindo a primeira infância.
-        </p>
-        <h1>nossos produtos</h1>
-        <p>
-          As papinhas do Paladar de Neném são feitas com ingredientes naturais
-          frescos. As receitas possuem diferentes texturas e não utilizamos sal,
-          óleo ou conservantes durante o preparo. O produto é congelado em
-          embalagens livres de Bisfenol-A (BPA Free). Na hora da refeição, basta
-          aquecer e a comidinha estará pronta para servir.
-        </p>
+        <div>
+          <h1>nossos valores</h1>
+          <p>
+            Nós também somos uma família e temos um bebê em casa. Por isso,
+            sabemos da importância da alimentação balanceada e do afeto na vida da
+            criança. Com nossos produtos, ajudamos no desenvolvimento do paladar a
+            partir da introdução alimentar, após os seis meses de idade. Assim, as
+            papinhas naturais congeladas buscam complementar o leite materno, para
+            que o neném cresça forte e saudável. Sem se preocupar com o preparo do
+            alimento, mamães e papais também podem passar mais tempo com seus
+            filhos, curtindo a primeira infância.
+          </p>
+        </div>
+        <div>
+          <h1>nossos produtos</h1>
+          <p>
+            As papinhas do Paladar de Neném são feitas com ingredientes naturais
+            frescos. As receitas possuem diferentes texturas e não utilizamos sal,
+            óleo ou conservantes durante o preparo. O produto é congelado em
+            embalagens livres de Bisfenol-A (BPA Free). Na hora da refeição, basta
+            aquecer e a comidinha estará pronta para servir.
+          </p>
+        </div>
       </Content>
       <Footer />
     </Wrapper>

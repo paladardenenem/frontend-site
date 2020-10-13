@@ -47,3 +47,4 @@ export async function getTags(): Promise<Tags> {
     return response;
   }
 }
+
