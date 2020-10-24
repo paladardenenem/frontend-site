@@ -70,7 +70,7 @@ export const CategoryContainer = styled.aside`
 
   @media (max-width: 425px) {
     width: 100%;
-
+    margin-bottom: 1rem;
     h2 {
       margin: 0rem 0;
     }
