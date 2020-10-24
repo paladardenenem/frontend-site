@@ -15,6 +15,9 @@ import {
 } from '../styles/pages/History';
 import coverimg from '../assets/familia.jpeg';
 import SEO from '../components/SEO';
+import { Action, Fab } from 'react-tiny-fab';
+import { GiShoppingCart } from 'react-icons/gi';
+import FloatingButton from '../components/FloatingButton';
 // const depositions = [
 //   {
 //     text:
@@ -36,6 +39,7 @@ const History: React.FC = () => {
   const i = 0;
   return (
     <Wrapper>
+      <FloatingButton />
       <SEO
         title="Sobre nós"
         description="Sabe aquela história de que um bebê muda tudo? Então... aqui foi

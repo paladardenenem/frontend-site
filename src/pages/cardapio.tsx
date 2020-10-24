@@ -7,19 +7,65 @@ import {
   MenuContainer
 } from '../styles/pages/Cardapio';
 
-import { AiOutlineCheck } from 'react-icons/ai';
 // import { Container } from './styles';
-import cardapioImg from '../assets/fotos/fotos_cortadas/amarelinha.jpg';
 import SEO from '../components/SEO';
+import { AiOutlineCheck } from 'react-icons/ai';
+import amarelinhaSrc from '../assets/fotos/amarelinha.jpg';
+import cirandinhaSrc from '../assets/fotos/fotos_cortadas/cirandinha.jpg';
+import correCutiaSrc from '../assets/fotos/fotos_cortadas/corre-cutia.jpg';
+import feijaozinhoAmigoSrc from '../assets/fotos/fotos_cortadas/feijaozinho-amigo.jpg';
+import vaquinhaAtoladaSrc from '../assets/fotos/fotos_cortadas/vaquinha-atolada.jpg';
+import FloatingButton from '../components/FloatingButton';
 
 interface MenuProps {
   name: string;
   image: string;
   category: string;
+  description: string;
 }
 const Cardapio: React.FC = () => {
+  const catalog: MenuProps[] = [
+    {
+      name: 'amarelinha',
+      category: 'brincadeiras',
+      image: amarelinhaSrc,
+      description:
+        'Purê com pedaços de inhame, purê com pedaços de abóbora moranga, patinho bovino moído, lentilha, molho de tomate caseiro, couve, cebola e alho.'
+    },
+    {
+      name: 'cirandinha',
+      category: 'brincadeiras',
+      image: cirandinhaSrc,
+      description:
+        'Purê com pedaços de inhame, purê com pedaços de abóbora moranga, patinho bovino moído, lentilha, molho de tomate caseiro, couve, cebola e alho.'
+    },
+    {
+      name: 'corre cutia',
+      category: 'brincadeiras',
+      image: correCutiaSrc,
+      description:
+        'Purê com pedaços de batata baroa, purê com pedaços de abóbora com espinafre, peito de frango desfiado, molho de tomate caseiro, ervilha, cebola e alho.'
+    },
+    {
+      name: 'feijaozinho amigo',
+      category: 'caldinhos',
+      image: feijaozinhoAmigoSrc,
+      description:
+        'Caldinho de feijão turbinado com beterraba, músculo bovino desfiado, molho de tomate caseiro, salsinha e cebolinha.'
+    },
+    {
+      name: 'vaquinha atolada',
+      category: 'caldinhos',
+      image: vaquinhaAtoladaSrc,
+      description:
+        'Caldinho de feijão turbinado com beterraba, músculo bovino desfiado, molho de tomate caseiro, salsinha e cebolinha.'
+    }
+  ];
+
   return (
     <Wrapper>
+      <FloatingButton />
+
       <SEO title="Cardápio" />
       <Head>
         <h1>cardápio</h1>
@@ -36,12 +82,6 @@ const Cardapio: React.FC = () => {
             </li>
             <li>
               <a href="">Cardápio Caldinhos </a>
-            </li>
-            <li>
-              <a href="">Cardápio etc </a>
-            </li>
-            <li>
-              <a href="">Cardápio etc </a>
             </li>
           </ul>
           <div>
@@ -66,38 +106,12 @@ const Cardapio: React.FC = () => {
           </div>
         </CategoryContainer>
         <MenuContainer>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
-          <div>
-            <img src={cardapioImg} alt="" />
-            <span>nome</span>
-          </div>
+          {catalog.map((product, index) => (
+            <div key={index}>
+              <img src={product.image} alt={product.name} />
+              <span>{product.name}</span>
+            </div>
+          ))}
         </MenuContainer>
       </Container>
     </Wrapper>

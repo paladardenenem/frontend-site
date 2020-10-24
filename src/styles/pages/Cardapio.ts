@@ -24,6 +24,10 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const CategoryContainer = styled.aside`
@@ -63,6 +67,18 @@ export const CategoryContainer = styled.aside`
     width: 50%;
     height: 50%;
   }
+
+  @media (max-width: 425px) {
+    width: 100%;
+
+    h2 {
+      margin: 0rem 0;
+    }
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+  }
 `;
 
 const menuBoxAnimation = keyframes`
@@ -80,10 +96,12 @@ export const MenuContainer = styled.aside`
   div {
     cursor: pointer;
 
+    align-items: center;
     display: flex;
     flex-direction: column;
     animation: ${menuBoxAnimation} 1s;
     img {
+      border-radius: 5%;
       height: min(20vh, 25vh);
     }
     span {
@@ -108,13 +126,20 @@ export const MenuContainer = styled.aside`
 
   @media (max-width: 426px) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 376px) {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    width: 100%;
     div {
       img {
-        height: 12vh;
+        height: 25vh;
+        width: 25vh;
+      }
+    }
+  }
+
+  @media (max-width: 321px) {
+    div {
+      img {
+        height: 20vh;
+        width: 20vh;
       }
     }
   }

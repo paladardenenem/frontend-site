@@ -38,14 +38,14 @@ const Header: React.FC = () => {
                   <a href="">cardápio</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="">loja virtual</a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="/blog">
                   <a href="">blog</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact">
                   <a href="">contato</a>
