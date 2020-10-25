@@ -21,6 +21,7 @@ import correCutiaSrc from '../assets/fotos/fotos_cortadas/corre-cutia.jpg';
 import feijaozinhoAmigoSrc from '../assets/fotos/fotos_cortadas/feijaozinho-amigo.jpg';
 import vaquinhaAtoladaSrc from '../assets/fotos/fotos_cortadas/vaquinha-atolada.jpg';
 import FloatingButton from '../components/FloatingButton';
+import Modal from '../components/Modal';
 
 interface MenuProps {
   name: string;
@@ -67,6 +68,11 @@ const Cardapio: React.FC = () => {
     }
   ]);
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const [activeModalProduct, setActiveModalProduct] = useState<MenuProps>(
+    catalog[0]
+  );
   const handleFilter = useCallback((event: FormEvent, category: string) => {
     event.preventDefault();
     setCatalog(
@@ -75,11 +81,23 @@ const Cardapio: React.FC = () => {
         : catalog
     );
   }, []);
+
+  const handleOpenModal = useCallback((product: MenuProps) => {
+    setModalIsOpen(true);
+    setActiveModalProduct(product);
+  }, []);
+
   return (
     <Wrapper>
       <FloatingButton />
 
       <SEO title="Cardápio" />
+
+      <Modal
+        modalIsOpen={modalIsOpen}
+        product={activeModalProduct}
+        setModalIsOpen={setModalIsOpen}
+      />
       <Head>
         <h1>cardápio</h1>
       </Head>
@@ -126,7 +144,7 @@ const Cardapio: React.FC = () => {
         </CategoryContainer>
         <MenuContainer>
           {catalog.map((product, index) => (
-            <div key={index}>
+            <div key={index} onClick={() => handleOpenModal(product)}>
               <img src={product.image} alt={product.name} />
               <span>{product.name}</span>
             </div>
