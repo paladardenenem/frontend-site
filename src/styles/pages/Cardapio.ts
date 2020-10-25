@@ -24,7 +24,7 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 528px) {
     flex-direction: column;
     align-items: center;
   }
@@ -68,7 +68,7 @@ export const CategoryContainer = styled.aside`
     height: 50%;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 528px) {
     width: 100%;
     margin-bottom: 1rem;
     h2 {
@@ -124,7 +124,7 @@ export const MenuContainer = styled.aside`
     }
   }
 
-  @media (max-width: 426px) {
+  @media (max-width: 528px) {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     div {

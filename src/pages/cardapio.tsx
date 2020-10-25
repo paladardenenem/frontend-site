@@ -1,4 +1,9 @@
-import React from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  FormEvent,
+  useCallback,
+  useState
+} from 'react';
 import {
   Wrapper,
   Container,
@@ -24,7 +29,7 @@ interface MenuProps {
   description: string;
 }
 const Cardapio: React.FC = () => {
-  const catalog: MenuProps[] = [
+  const [catalog, setCatalog] = useState<MenuProps[]>([
     {
       name: 'amarelinha',
       category: 'brincadeiras',
@@ -60,8 +65,16 @@ const Cardapio: React.FC = () => {
       description:
         'Caldinho de feijão turbinado com beterraba, músculo bovino desfiado, molho de tomate caseiro, salsinha e cebolinha.'
     }
-  ];
+  ]);
 
+  const handleFilter = useCallback((event: FormEvent, category: string) => {
+    event.preventDefault();
+    setCatalog(
+      category !== ' '
+        ? catalog.filter(product => product.category === category)
+        : catalog
+    );
+  }, []);
   return (
     <Wrapper>
       <FloatingButton />
@@ -75,13 +88,19 @@ const Cardapio: React.FC = () => {
           <h2>categorias</h2>
           <ul>
             <li>
-              <a href="">Todos os sabores</a>
+              <a onClick={event => handleFilter(event, ' ')} href="">
+                Todos os sabores
+              </a>
             </li>
             <li>
-              <a href="">Cardápio Brincadeiras </a>
+              <a href="" onClick={event => handleFilter(event, 'brincadeiras')}>
+                Cardápio Brincadeiras
+              </a>
             </li>
             <li>
-              <a href="">Cardápio Caldinhos </a>
+              <a href="" onClick={event => handleFilter(event, 'caldinhos')}>
+                Cardápio Caldinhos
+              </a>
             </li>
           </ul>
           <div>

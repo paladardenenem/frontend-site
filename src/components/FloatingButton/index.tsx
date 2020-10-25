@@ -6,6 +6,10 @@ import { Action, Fab } from 'react-tiny-fab';
 // import { Container } from './styles';
 
 const FloatingButton: React.FC = () => {
+  function handleClick() {
+    window.location.href =
+      'https://api.whatsapp.com/send?l=pt-BR&phone=5532988102965';
+  }
   return (
     <Fab
       icon={<GiShoppingCart size={34} />}
@@ -13,7 +17,11 @@ const FloatingButton: React.FC = () => {
       mainButtonStyles={{ backgroundColor: '#d62828' }}
       alwaysShowTitle
     >
-      <Action style={{ backgroundColor: '#128c7e' }} text="Whatsapp">
+      <Action
+        style={{ backgroundColor: '#128c7e' }}
+        onClick={() => handleClick()}
+        text="Whatsapp"
+      >
         <FaWhatsapp size={34} />
       </Action>
     </Fab>
