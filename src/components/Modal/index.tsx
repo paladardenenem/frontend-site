@@ -54,6 +54,20 @@ function Modal({ modalIsOpen, setModalIsOpen, product }: ModalProps): any {
           <section>
             <h2>{product.name}</h2>
             <p>{product.description}</p>
+
+            <div>
+              <p>
+                <strong>Preços:</strong>
+              </p>
+              <p>145 ml = R$ 10,00 </p>
+              <p>200 ml = R$ 12,00</p>
+              <p>kit 5 de 145 ml = R$ 40,00 </p>
+              <p>kit 5 de 200 ml = R$ 50,00 </p>
+              <p>
+                <strong>Modo de preparo:</strong> retire a tampa e aqueça em
+                microondas ou banho-maria vide embalagem.
+              </p>
+            </div>
           </section>
         </Container>
       </ReactModal>

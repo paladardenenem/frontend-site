@@ -49,6 +49,14 @@ export const Container = styled.div`
       background: ${props => props.theme.colors.danger};
       border: 0;
     }
+    div {
+      strong {
+        color: ${props => props.theme.colors.danger};
+      }
+      p {
+        padding: 0.5rem;
+      }
+    }
   }
 
   @media (max-width: 766px) {
