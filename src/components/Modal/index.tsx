@@ -11,7 +11,8 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     border: '2px solid #fff775',
-    borderRadius: '5%'
+    borderRadius: '5%',
+    zIndex: 5
   }
 };
 
@@ -45,7 +46,7 @@ function Modal({ modalIsOpen, setModalIsOpen, product }: ModalProps): any {
       >
         <Container>
           <button onClick={() => closeModal()}>
-            <RiCloseFill />
+            <RiCloseFill size={32} color="#d62828" />
           </button>
           <aside>
             <img src={product.image} alt={product.name} />
@@ -53,7 +54,6 @@ function Modal({ modalIsOpen, setModalIsOpen, product }: ModalProps): any {
           <section>
             <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <button onClick={() => handleClick()}>Comprar</button>
           </section>
         </Container>
       </ReactModal>

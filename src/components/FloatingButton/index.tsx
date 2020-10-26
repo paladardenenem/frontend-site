@@ -14,7 +14,12 @@ const FloatingButton: React.FC = () => {
     <Fab
       icon={<GiShoppingCart size={34} />}
       event="click"
-      mainButtonStyles={{ backgroundColor: '#d62828' }}
+      mainButtonStyles={{
+        backgroundColor: '#d62828',
+        position: 'absolute',
+        bottom: -30,
+        right: -20
+      }}
       alwaysShowTitle
     >
       <Action

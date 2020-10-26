@@ -9,8 +9,8 @@ export const Container = styled.div`
 
   > button {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 2%;
+    top: 2%;
     border: 0;
     background: transparent;
     cursor: pointer;
