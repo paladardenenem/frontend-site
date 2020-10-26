@@ -62,7 +62,7 @@ export const Item = styled.div`
 
   .signature {
     position: absolute;
-    bottom: -40%;
+    bottom: 0%;
     right: 0;
   }
   @media (max-width: 325px) {
