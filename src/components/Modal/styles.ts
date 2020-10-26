@@ -35,7 +35,7 @@ export const Container = styled.div`
     p {
       text-align: justify;
       padding: 1rem 0;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
     button {
       cursor: pointer;
@@ -54,7 +54,7 @@ export const Container = styled.div`
         color: ${props => props.theme.colors.danger};
       }
       p {
-        padding: 0.5rem;
+        padding: 0.25rem;
       }
     }
   }
@@ -66,7 +66,7 @@ export const Container = styled.div`
       max-width: 56vw;
 
       p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
   }
