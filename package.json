@@ -16,6 +16,7 @@
     "polished": "^3.6.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-elastic-carousel": "^0.9.1",
     "react-icons": "^3.11.0",
     "react-modal": "^3.11.2",
     "react-tiny-fab": "^4.0.1",

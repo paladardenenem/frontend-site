@@ -18,6 +18,8 @@ import pinturaAmarelaSrc from '../assets/elementos/pintura_amarela.png';
 import NewsletterForm from '../components/NewsletterForm';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import Link from 'next/link';
+
 const Home: React.FC = () => {
   return (
     <Wrapper>
@@ -46,7 +48,9 @@ const Home: React.FC = () => {
               selecionados, para proporcionar uma alimentação saudável para
               bebês, sem uso de sal ou conservantes.
             </p>
-            <a href="">conheça a nossa história </a>
+            <Link href="/nossahistoria">
+              <a href="">conheça a nossa história </a>
+            </Link>
           </aside>
           <img src={producaoSrc} alt="Producao" />
         </div>
@@ -70,7 +74,9 @@ const Home: React.FC = () => {
                 alimentar, quando o bebê ainda está se acostumando a ingerir
                 alimentos sólidos.
               </p>
-              <a href="">confira os sabores</a>
+              <Link href="/cardapio">
+                <a href="">confira os sabores</a>
+              </Link>
             </div>
           </div>
           <div className="product-content reverse">
@@ -86,7 +92,9 @@ const Home: React.FC = () => {
                 sabores. Já a textura de purê com pequenos pedaços ajuda a
                 estimular a mastigação.
               </p>
-              <a href="">confira os sabores</a>
+              <Link href="/cardapio">
+                <a href="">confira os sabores</a>
+              </Link>
             </div>
           </div>
         </Content>

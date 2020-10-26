@@ -97,7 +97,13 @@ const appearFromRight = keyframes`
   }
 `;
 
-export const DepositionsContainer = styled.div``;
+export const DepositionsContainer = styled.div`
+  width: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+`;
 
 export const Deposition = styled.div``;
 

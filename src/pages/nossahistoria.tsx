@@ -18,6 +18,7 @@ import SEO from '../components/SEO';
 import { Action, Fab } from 'react-tiny-fab';
 import { GiShoppingCart } from 'react-icons/gi';
 import FloatingButton from '../components/FloatingButton';
+import Carrousel from '../components/Carrousel';
 // const depositions = [
 //   {
 //     text:
@@ -106,6 +107,7 @@ const History: React.FC = () => {
             basta aquecer e a comidinha estará pronta para servir.
           </p>
         </div>
+        <Carrousel />
       </Content>
       <Footer />
     </Wrapper>
