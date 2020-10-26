@@ -23,7 +23,12 @@ const FloatingButton: React.FC = () => {
       alwaysShowTitle
     >
       <Action
-        style={{ backgroundColor: '#128c7e' }}
+        style={{
+          backgroundColor: '#128c7e',
+          position: 'absolute',
+          bottom: 15,
+          right: -20
+        }}
         onClick={() => handleClick()}
         text="Whatsapp"
       >
