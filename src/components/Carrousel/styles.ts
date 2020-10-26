@@ -50,6 +50,7 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+
   font-size: 1.4rem;
   font-family: 'Montserrat';
   text-align: right;
@@ -62,7 +63,7 @@ export const Item = styled.div`
 
   .signature {
     position: absolute;
-    bottom: 0%;
+    bottom: -51%;
     right: 0;
   }
   @media (max-width: 325px) {
