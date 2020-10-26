@@ -186,3 +186,10 @@ export const NewslatterContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const VideoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+`;

@@ -7,7 +7,8 @@ import {
   Divider,
   Content,
   Divisor,
-  NewslatterContainer
+  NewslatterContainer,
+  VideoContainer
 } from '../styles/pages/Home';
 import capaSrc from '../assets/bebe/capa.jpg';
 import producaoSrc from '../assets/marca/producao1.jpg';
@@ -19,6 +20,7 @@ import NewsletterForm from '../components/NewsletterForm';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import Link from 'next/link';
+import ReactPlayer from 'react-player';
 
 const Home: React.FC = () => {
   return (
@@ -105,9 +107,9 @@ const Home: React.FC = () => {
       <NewslatterContainer>
         <NewsletterForm />
       </NewslatterContainer>
-      <Hero>
-        <video src="https://www.youtube.com/watch?v=uE4YMJFJfiI"></video>
-      </Hero>
+      <VideoContainer>
+        <ReactPlayer url="https://www.youtube.com/watch?v=uE4YMJFJfiI"></ReactPlayer>
+      </VideoContainer>
       <Footer />
     </Wrapper>
   );

@@ -1,9 +1,15 @@
-const withImages = require('next-images')
-const withPWA = require('next-pwa')
+const withImages = require('next-images');
+const withVideos = require('next-videos');
 
-module.exports = withPWA(withImages({
-  esModule: true,
-  pwa: {
-    dest: 'public'
-}
-}))
+const withPWA = require('next-pwa');
+
+module.exports = withPWA(
+  withImages(
+    withVideos({
+      esModule: true,
+      pwa: {
+        dest: 'public'
+      }
+    })
+  )
+);
