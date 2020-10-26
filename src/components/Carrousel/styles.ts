@@ -41,7 +41,7 @@ export const Container = styled.div`
   }
   @media (max-width: 325px) {
     div.rec {
-      min-width: 37vw;
+      min-width: 30vw;
     }
   }
 `;
@@ -66,6 +66,8 @@ export const Item = styled.div`
     right: 0;
   }
   @media (max-width: 325px) {
+    font-size: 1.2rem;
+
     .signature {
       position: absolute;
       right: 0;
