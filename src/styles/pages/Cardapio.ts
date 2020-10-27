@@ -135,7 +135,7 @@ export const MenuContainer = styled.aside`
     }
   }
 
-  @media (max-width: 321px) {
+  @media (max-width: 449px) {
     div {
       img {
         height: 20vh;
@@ -144,7 +144,7 @@ export const MenuContainer = styled.aside`
     }
   }
 
-  @media (max-width: 257px) {
+  @media (max-width: 300px) {
     div {
       img {
         height: 15vh;
