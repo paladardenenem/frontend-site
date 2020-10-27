@@ -9,7 +9,7 @@ const NewsletterForm: React.FC = () => {
       <form>
         <span>inscreva-se na nossa newsletter</span>
         <input type="text" placeholder="digite seu melhor e-mail" />
-        <button type="button">Enviar</button>
+        <button type="submit">Enviar</button>
       </form>
     </Container>
   );
