@@ -143,4 +143,13 @@ export const MenuContainer = styled.aside`
       }
     }
   }
+
+  @media (max-width: 257px) {
+    div {
+      img {
+        height: 15vh;
+        width: 15vh;
+      }
+    }
+  }
 `;
