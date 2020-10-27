@@ -36,35 +36,35 @@ const Cardapio: React.FC = () => {
       category: 'brincadeiras',
       image: amarelinhaSrc,
       description:
-        'Purê com pedaços de inhame, purê com pedaços de abóbora moranga, patinho bovino moído, lentilha, molho de tomate caseiro, couve, cebola e alho.'
+        'Purê com pedaços de batata baroa, purê com pedaços de abóbora com espinafre, peito de frango desfiado, molho de tomate caseiro, ervilha, cebola e alho.'
     },
     {
       name: 'cirandinha',
       category: 'brincadeiras',
       image: cirandinhaSrc,
       description:
-        'Purê com pedaços de inhame, purê com pedaços de abóbora moranga, patinho bovino moído, lentilha, molho de tomate caseiro, couve, cebola e alho.'
+        'Purê de batata doce, cenoura picadinha com salsinha, peito de frango desfiado, beterraba, cebola e alho.'
     },
     {
       name: 'corre cutia',
       category: 'brincadeiras',
       image: correCutiaSrc,
       description:
-        'Purê com pedaços de batata baroa, purê com pedaços de abóbora com espinafre, peito de frango desfiado, molho de tomate caseiro, ervilha, cebola e alho.'
+        'Purê com pedaços de inhame, purê com pedaços de abóbora moranga, patinho bovino moído, lentilha, molho de tomate caseiro, couve, cebola e alho.'
     },
     {
       name: 'feijaozinho amigo',
       category: 'caldinhos',
       image: feijaozinhoAmigoSrc,
       description:
-        'Caldinho de feijão turbinado com beterraba, músculo bovino desfiado, molho de tomate caseiro, salsinha e cebolinha.'
+        'Caldinho de feijão turbinado com beterraba, músculo bovino desfiado, molho de tomate caseiro, cebola, alho, salsinha e cebolinha.'
     },
     {
       name: 'vaquinha atolada',
       category: 'caldinhos',
       image: vaquinhaAtoladaSrc,
       description:
-        'Caldinho de feijão turbinado com beterraba, músculo bovino desfiado, molho de tomate caseiro, salsinha e cebolinha.'
+        'Caldinho de mandioca, músculo bovino desfiado, molho de tomate caseiro, cebola, alho, salsinha e cebolinha.'
     }
   ]);
 
