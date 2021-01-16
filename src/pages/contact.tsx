@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   Container,
   Wrapper,
@@ -9,10 +8,13 @@ import {
 import contactImg from '../assets/elementos/contato.jpg';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import FloatingButton from '../components/FloatingButton';
+
 const Contact: React.FC = () => {
   return (
     <>
       <SEO title="Contatos" description="Atendimento ao cliente e parcerias" />
+      <FloatingButton />
       <Container>
         <Wrapper>
           <Content>

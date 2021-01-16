@@ -20,6 +20,7 @@ import cirandinhaSrc from '../assets/fotos/fotos_cortadas/cirandinha.jpg';
 import correCutiaSrc from '../assets/fotos/fotos_cortadas/corre-cutia.jpg';
 import feijaozinhoAmigoSrc from '../assets/fotos/fotos_cortadas/feijaozinho-amigo.jpg';
 import vaquinhaAtoladaSrc from '../assets/fotos/fotos_cortadas/vaquinha-atolada.jpg';
+import mineirinhoSrc from '../assets/fotos/fotos_cortadas/mineirinho.jpg';
 import FloatingButton from '../components/FloatingButton';
 import Modal from '../components/Modal';
 
@@ -65,6 +66,13 @@ const Cardapio: React.FC = () => {
       image: vaquinhaAtoladaSrc,
       description:
         'Caldinho de mandioca, músculo bovino desfiado, molho de tomate caseiro, cebola, alho, salsinha e cebolinha.'
+    },
+    {
+      name: 'mineirinho',
+      category: 'regionalismo',
+      image: mineirinhoSrc,
+      description:
+        'Esse pratinho é feito em camadas, com textura de purê e pedaços. Na receita, temos creme de mandioca, patinho moído, molho de tomate caseiro, quiabo e tomate. O temperinho é alho e cebola. '
     }
   ]);
 
@@ -118,6 +126,11 @@ const Cardapio: React.FC = () => {
             <li>
               <a href="" onClick={event => handleFilter(event, 'caldinhos')}>
                 Cardápio Caldinhos
+              </a>
+            </li>
+            <li>
+              <a href="" onClick={event => handleFilter(event, 'regionalismo')}>
+                Cardápio Regionalismo{' '}
               </a>
             </li>
           </ul>

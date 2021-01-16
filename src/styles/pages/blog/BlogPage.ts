@@ -1,173 +1,141 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-`;
-
-interface ImageContainerProps {
-  imgUrl: string | string[];
-}
-export const ImageHeaderContainer = styled.div<ImageContainerProps>`
-  margin: 10rem 0;
-  background: url(${props => props.imgUrl}) no-repeat center;
-  background-size: cover;
-  width: 80%;
-  height: 40rem;
-  border-radius: 3%;
-  display: flex;
-  align-items: flex-end;
-  padding: 5rem;
-
-  div {
-    background: #fff;
-    opacity: 0.8;
-    height: 40%;
-    border-radius: 3%;
-    padding: 1rem 5rem;
-
-    h1 {
-      -webkit-line-clamp: 1 !important; /* number of lines to show */
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 2.5rem;
-      color: ${props => props.theme.colors.danger};
-    }
-    p {
-      font-size: 1.4rem;
-      margin: 1rem 0;
-      -webkit-line-clamp: 2 !important; /* number of lines to show */
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    a {
-      color: ${props => props.theme.colors.danger};
-      transition: color 0.2s;
-      &:hover {
-        color: ${lighten(0.2, '#d62828')};
-      }
-    }
-  }
-  @media (max-width: 760px) {
-    margin: 5rem 0;
-
-    div {
-      h1 {
-        font-size: 100%;
-      }
-      p {
-        font-size: 80%;
-      }
-    }
-  }
-
-  @media (max-width: 320px) {
-    div {
-      h1 {
-        font-size: 70%;
-      }
-      p {
-        font-size: 80%;
-      }
-    }
-    div {
-      width: 110%;
-      padding: 2rem 1rem;
-    }
-  }
-`;
-
-export const Container = styled.div`
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 2fr 1fr;
-`;
-
-export const BlogPostContainer = styled.div`
-  display: flex;
   flex-direction: column;
-  gap: 5rem;
-  align-items: center;
-  justify-content: flex-start;
-  width: 70%;
 `;
-
-export const BlogThemeContainer = styled.div`
-  h1 {
-    font-size: 2.5rem;
-    color: ${props => props.theme.colors.danger};
-    margin-bottom: 5px;
-  }
-  ul {
-    list-style: none;
-
-    li {
-      padding: 0.5rem 0;
-
-      a {
-        cursor: pointer;
-        transition: color 0.2s;
-        &:hover {
-          color: ${props => props.theme.colors.danger};
-        }
-      }
-    }
-  }
-`;
-
-export const BlogPost = styled.div`
+export const Container = styled.div`
+  margin-top: 10rem;
+  position: relative;
   display: flex;
-  gap: 3rem;
-  padding: 2rem 0;
-  border-top: 1px solid ${props => props.theme.colors.textDark};
+  align-items: center;
 
-  img {
-    height: min(20vh, 25vh);
-    width: min(20vh, 25vh);
-    border-radius: 10%;
-  }
-
-  div {
-    h2 {
-      color: ${props => props.theme.colors.danger};
-      font-size: 2rem;
-    }
-    p {
-      margin: 1rem 0;
-      font-size: 1.4rem;
-      text-align: justify;
-      -webkit-line-clamp: 9 !important; /* number of lines to show */
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    a {
-      color: ${props => props.theme.colors.danger};
-      transition: color 0.2s;
-      &:hover {
-        color: ${lighten(0.2, '#d62828')};
-      }
-    }
-  }
-
-  @media (max-width: 760px) {
+  @media (max-width: 1002px) {
     flex-direction: column;
   }
+
+  @media (max-width: 666px) {
+    display: none;
+  }
 `;
 
-export const AddPostButton = styled.button`
+export const ImageBlock = styled.img`
+  width: 601.98px;
+  height: 603px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 1002px) {
+    width: 512px;
+  }
+`;
+export const ContentContainer = styled.div`
+  width: 512px;
+  height: 503px;
+  margin-left: -12rem;
+  z-index: 5;
+
+  background: #ffffff;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 0 5rem;
+  gap: 1rem;
+
+  label {
+    color: ${props => props.theme.colors.danger};
+  }
+  h1 {
+    color: ${props => props.theme.colors.danger};
+  }
+  p {
+    text-align: justify;
+    font-family: 'Montserrat';
+
+    font-size: 14px;
+    line-height: 17px;
+    color: #50514f;
+  }
+  span,
+  a {
+    color: ${props => props.theme.colors.danger};
+  }
+
+  @media (max-width: 1002px) {
+    margin-left: 0;
+  }
+`;
+
+export const MiniContentContainer = styled.div`
+  margin: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  @media (max-width: 1002px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 666px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+interface MiniContentProps {
+  invisible?: boolean;
+}
+export const MiniContent = styled.div<MiniContentProps>`
   cursor: pointer;
+  max-width: 314px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: ${props => (props.invisible ? 'none' : '')};
+  > div {
+    h2 {
+      color: ${props => props.theme.colors.danger};
+    }
+    p {
+      font-size: 14px;
+      color: #50514f;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 13; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #eee;
+    padding: 2rem;
+    height: 430px;
+    position: relative;
+
+    border-bottom: 1px dashed #eee;
+  }
+
+  @media (max-width: 666px) {
+    display: block;
+  }
+`;
+export const ImageMiniContent = styled.img`
+  width: 314px;
+  height: 237px;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.02);
+  }
+`;
+export const MiniContentFooter = styled.div`
   position: absolute;
-  top: 48%;
-  right: 16%;
-  border: 0;
-  background: ${props => props.theme.colors.primary};
+  bottom: 0;
+  right: 20px;
 `;

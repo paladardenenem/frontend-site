@@ -21,14 +21,17 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
+import FloatingButton from '../components/FloatingButton';
 
 const Home: React.FC = () => {
   return (
     <Wrapper>
+      <FloatingButton />
       <SEO
         title="Página Inicial"
         description="Paladar de neném, Com nossos produtos, buscamos levar praticidade para a rotina dos pais, que terão mais tempo para aproveitar a primeira infância dos filhos."
       />
+
       <Container className="image">
         <img src={capaSrc} alt="Joao Lucas" />
         <h1>

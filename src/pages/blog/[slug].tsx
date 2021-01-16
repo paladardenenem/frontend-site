@@ -10,6 +10,8 @@ interface PathsProps {
 }
 export default function Post(props: PostOrPage) {
   const router = useRouter();
+
+  console.log(props);
   if (router.isFallback) {
     return <div />;
   }
